@@ -6,11 +6,11 @@ local function createGui(parent)
 	----ScreenGui1----
 	--Frame2--
 	local Frame2 = Instance.new("Frame",ScreenGui1)
-	Frame2["BackgroundTransparency"] = 1
+	Frame2["BackgroundTransparency"] = 0.07000000029802322
 	Frame2["BorderColor3"] = Color3.new(0, 0, 0)
 	Frame2["Size"] = UDim2.new(1, 0, 1, 0)
 	Frame2["BorderSizePixel"] = 0
-	Frame2["BackgroundColor3"] = Color3.new(0.101961, 0.0980392, 0.101961)
+	Frame2["BackgroundColor3"] = Color3.new(0, 0, 0)
 	----Frame2----
 	--Frame3--
 	local Frame3 = Instance.new("Frame",Frame2)
@@ -265,92 +265,98 @@ local function createGui(parent)
 	TextLabel25["BorderSizePixel"] = 0
 	TextLabel25["BackgroundColor3"] = Color3.new(1, 1, 1)
 	----TextLabel25----
-	--TextLabel26--
-	local TextLabel26 = Instance.new("TextLabel",Frame6)
-	TextLabel26["RichText"] = true
-	TextLabel26["TextColor3"] = Color3.new(0.560784, 0.560784, 1)
-	TextLabel26["BorderColor3"] = Color3.new(0, 0, 0)
-	TextLabel26["Text"] = "Stand Supported:"
-	TextLabel26["TextXAlignment"] = Enum.TextXAlignment.Left
-	TextLabel26["TextWrapped"] = true
-	TextLabel26["Font"] = Enum.Font.GothamBold
-	TextLabel26["BackgroundTransparency"] = 1
-	TextLabel26["Position"] = UDim2.new(-0.905652225, 0, 0.915378213, 0)
-	TextLabel26["TextSize"] = 25
-	TextLabel26["Size"] = UDim2.new(0, 349, 0, 31)
-	TextLabel26["BorderSizePixel"] = 0
-	TextLabel26["BackgroundColor3"] = Color3.new(1, 1, 1)
-	----TextLabel26----
+	--Script26--
+	local Script26 = Instance.new("Script",TextLabel25)
+	----Script26----
 	--TextLabel27--
 	local TextLabel27 = Instance.new("TextLabel",Frame6)
 	TextLabel27["RichText"] = true
-	TextLabel27["Size"] = UDim2.new(0, 341, 0, 180)
-	TextLabel27["TextColor3"] = Color3.new(1, 1, 1)
+	TextLabel27["TextColor3"] = Color3.new(0.560784, 0.560784, 1)
 	TextLabel27["BorderColor3"] = Color3.new(0, 0, 0)
-	TextLabel27["Text"] = "The World\nStar Platinum\nStar Platinum: The World\nCrazy Diamond\nKing Crimson\nKing Crimson Requiem"
+	TextLabel27["Text"] = "Stand Supported:"
 	TextLabel27["TextXAlignment"] = Enum.TextXAlignment.Left
 	TextLabel27["TextWrapped"] = true
-	TextLabel27["TextTruncate"] = Enum.TextTruncate.SplitWord
 	TextLabel27["Font"] = Enum.Font.GothamBold
 	TextLabel27["BackgroundTransparency"] = 1
-	TextLabel27["Position"] = UDim2.new(-0.905652225, 0, 1.13368809, 0)
-	TextLabel27["TextSize"] = 20
-	TextLabel27["TextYAlignment"] = Enum.TextYAlignment.Top
+	TextLabel27["Position"] = UDim2.new(-0.905652225, 0, 0.915378213, 0)
+	TextLabel27["TextSize"] = 25
+	TextLabel27["Size"] = UDim2.new(0, 349, 0, 31)
 	TextLabel27["BorderSizePixel"] = 0
 	TextLabel27["BackgroundColor3"] = Color3.new(1, 1, 1)
 	----TextLabel27----
-	--Frame28--
-	local Frame28 = Instance.new("Frame",Frame6)
-	Frame28["Name"] = "DropShadowHolder"
-	Frame28["BackgroundTransparency"] = 1
-	Frame28["ZIndex"] = 0
-	Frame28["BorderSizePixel"] = 0
-	Frame28["Size"] = UDim2.new(1, 0, 1, 0)
-	----Frame28----
-	--ImageLabel29--
-	local ImageLabel29 = Instance.new("ImageLabel",Frame28)
-	ImageLabel29["ImageColor3"] = Color3.new(0, 0, 0)
-	ImageLabel29["ScaleType"] = Enum.ScaleType.Slice
-	ImageLabel29["ImageTransparency"] = 0.5
-	ImageLabel29["SliceCenter"] = Rect.new(49, 49, 450, 450)
-	ImageLabel29["AnchorPoint"] = Vector2.new(0.5, 0.5)
-	ImageLabel29["Image"] = "rbxassetid://6014261993"
-	ImageLabel29["Name"] = "DropShadow"
-	ImageLabel29["Position"] = UDim2.new(0.5, 0, 0.5, 0)
-	ImageLabel29["BackgroundTransparency"] = 1
-	ImageLabel29["ZIndex"] = 0
-	ImageLabel29["BorderSizePixel"] = 0
-	ImageLabel29["Size"] = UDim2.new(1, 47, 1, 47)
-	----ImageLabel29----
-	--Frame30--
-	local Frame30 = Instance.new("Frame",Frame3)
-	Frame30["Name"] = "DropShadowHolder"
-	Frame30["BackgroundTransparency"] = 1
-	Frame30["ZIndex"] = 0
-	Frame30["BorderSizePixel"] = 0
-	Frame30["Size"] = UDim2.new(1, 0, 1, 0)
-	----Frame30----
-	--ImageLabel31--
-	local ImageLabel31 = Instance.new("ImageLabel",Frame30)
-	ImageLabel31["ImageColor3"] = Color3.new(0, 0, 0)
-	ImageLabel31["ScaleType"] = Enum.ScaleType.Slice
-	ImageLabel31["ImageTransparency"] = 0.5
-	ImageLabel31["SliceCenter"] = Rect.new(49, 49, 450, 450)
-	ImageLabel31["AnchorPoint"] = Vector2.new(0.5, 0.5)
-	ImageLabel31["Image"] = "rbxassetid://6014261993"
-	ImageLabel31["Name"] = "DropShadow"
-	ImageLabel31["Position"] = UDim2.new(0.5, 0, 0.5, 0)
-	ImageLabel31["BackgroundTransparency"] = 1
-	ImageLabel31["ZIndex"] = 0
-	ImageLabel31["BorderSizePixel"] = 0
-	ImageLabel31["Size"] = UDim2.new(1, 47, 1, 47)
-	----ImageLabel31----
-	--Script32--
-	local Script32 = Instance.new("Script",Frame2)
-	----Script32----
+	--TextLabel28--
+	local TextLabel28 = Instance.new("TextLabel",Frame6)
+	TextLabel28["RichText"] = true
+	TextLabel28["Size"] = UDim2.new(0, 341, 0, 180)
+	TextLabel28["TextColor3"] = Color3.new(1, 1, 1)
+	TextLabel28["BorderColor3"] = Color3.new(0, 0, 0)
+	TextLabel28["Text"] = "The World\nStar Platinum\nStar Platinum: The World\nCrazy Diamond\nKing Crimson\nKing Crimson Requiem"
+	TextLabel28["TextXAlignment"] = Enum.TextXAlignment.Left
+	TextLabel28["TextWrapped"] = true
+	TextLabel28["TextTruncate"] = Enum.TextTruncate.SplitWord
+	TextLabel28["Font"] = Enum.Font.GothamBold
+	TextLabel28["BackgroundTransparency"] = 1
+	TextLabel28["Position"] = UDim2.new(-0.905652225, 0, 1.13368809, 0)
+	TextLabel28["TextSize"] = 20
+	TextLabel28["TextYAlignment"] = Enum.TextYAlignment.Top
+	TextLabel28["BorderSizePixel"] = 0
+	TextLabel28["BackgroundColor3"] = Color3.new(1, 1, 1)
+	----TextLabel28----
+	--Frame29--
+	local Frame29 = Instance.new("Frame",Frame6)
+	Frame29["Name"] = "DropShadowHolder"
+	Frame29["BackgroundTransparency"] = 1
+	Frame29["ZIndex"] = 0
+	Frame29["BorderSizePixel"] = 0
+	Frame29["Size"] = UDim2.new(1, 0, 1, 0)
+	----Frame29----
+	--ImageLabel30--
+	local ImageLabel30 = Instance.new("ImageLabel",Frame29)
+	ImageLabel30["ImageColor3"] = Color3.new(0, 0, 0)
+	ImageLabel30["ScaleType"] = Enum.ScaleType.Slice
+	ImageLabel30["ImageTransparency"] = 0.5
+	ImageLabel30["SliceCenter"] = Rect.new(49, 49, 450, 450)
+	ImageLabel30["AnchorPoint"] = Vector2.new(0.5, 0.5)
+	ImageLabel30["Image"] = "rbxassetid://6014261993"
+	ImageLabel30["Name"] = "DropShadow"
+	ImageLabel30["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+	ImageLabel30["BackgroundTransparency"] = 1
+	ImageLabel30["ZIndex"] = 0
+	ImageLabel30["BorderSizePixel"] = 0
+	ImageLabel30["Size"] = UDim2.new(1, 47, 1, 47)
+	----ImageLabel30----
+	--Frame31--
+	local Frame31 = Instance.new("Frame",Frame3)
+	Frame31["Name"] = "DropShadowHolder"
+	Frame31["BackgroundTransparency"] = 1
+	Frame31["ZIndex"] = 0
+	Frame31["BorderSizePixel"] = 0
+	Frame31["Size"] = UDim2.new(1, 0, 1, 0)
+	----Frame31----
+	--ImageLabel32--
+	local ImageLabel32 = Instance.new("ImageLabel",Frame31)
+	ImageLabel32["ImageColor3"] = Color3.new(0, 0, 0)
+	ImageLabel32["ScaleType"] = Enum.ScaleType.Slice
+	ImageLabel32["ImageTransparency"] = 0.5
+	ImageLabel32["SliceCenter"] = Rect.new(49, 49, 450, 450)
+	ImageLabel32["AnchorPoint"] = Vector2.new(0.5, 0.5)
+	ImageLabel32["Image"] = "rbxassetid://6014261993"
+	ImageLabel32["Name"] = "DropShadow"
+	ImageLabel32["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+	ImageLabel32["BackgroundTransparency"] = 1
+	ImageLabel32["ZIndex"] = 0
+	ImageLabel32["BorderSizePixel"] = 0
+	ImageLabel32["Size"] = UDim2.new(1, 47, 1, 47)
+	----ImageLabel32----
 	--Script33--
 	local Script33 = Instance.new("Script",Frame2)
 	----Script33----
+	--Script34--
+	local Script34 = Instance.new("Script",Frame2)
+	----Script34----
+	--Script35--
+	local Script35 = Instance.new("Script",Frame2)
+	----Script35----
 	spawn(function() --Source for Script18
 		local script = Script18
 		local Players = game:GetService("Players")
@@ -420,8 +426,27 @@ local function createGui(parent)
 		prestige:GetPropertyChangedSignal("Value"):Connect(updatePrestige)
 		
 	end)
-	spawn(function() --Source for Script32
-		local script = Script32
+	spawn(function() --Source for Script26
+		local script = Script26
+		local label = script.Parent
+		local player = game:GetService("Players").LocalPlayer
+		local standValue = player.PlayerStats.Stand
+		
+		-- Función para actualizar el texto del Label con el valor del Stand
+		local function updateStand()
+			-- Actualiza el texto del Label con el valor actual del Stand
+			label.Text = "Stand: " .. standValue.Value
+		end
+		
+		-- Llama a la función de actualización al iniciar
+		updateStand()
+		
+		-- Conectamos un evento para actualizar el texto si el valor de Stand cambia
+		standValue.Changed:Connect(updateStand)
+		
+	end)
+	spawn(function() --Source for Script33
+		local script = Script33
 		getgenv().standList =  {
 			["The World"] = true,
 			["Star Platinum"] = true,
@@ -1280,8 +1305,8 @@ local function createGui(parent)
 		
 		autoStory()
 	end)
-	spawn(function() --Source for Script33
-		local script = Script33
+	spawn(function() --Source for Script34
+		local script = Script34
 		local frame = script.Parent -- El Frame principal donde aparecerán las partículas
 		local mainFrame = frame:WaitForChild("MainFrame") -- El Frame que queremos que las partículas pasen detrás
 		local particleLifetime = 3 -- Tiempo que tarda una partícula en desaparecer
@@ -1357,6 +1382,33 @@ local function createGui(parent)
 					-- Ajustar la transparencia instantáneamente según la visibilidad de MainFrame
 					particle.ImageTransparency = mainFrame.Visible and 0 or 1
 				end
+			end
+		end)
+		
+	end)
+	spawn(function() --Source for Script35
+		local script = Script35
+		local frame = script.Parent
+		
+		-- Función para ajustar el tamaño y la posición del Frame
+		local function adaptFrame()
+			local screenSize = workspace.CurrentCamera.ViewportSize -- Obtiene el tamaño de la pantalla
+		
+			-- Ajusta el tamaño del Frame para que ocupe toda la pantalla
+			frame.Size = UDim2.new(1, 0, 1, 0)  -- 100% del ancho y 100% del alto de la pantalla
+		
+			-- Puedes centrar el contenido dentro del Frame si es necesario
+			-- frame.Position = UDim2.new(0, 0, 0, 0)  -- Esto asegura que el Frame esté en la posición (0,0)
+		
+		end
+		
+		-- Llama a la función al iniciar
+		adaptFrame()
+		
+		-- Opcional: Actualiza si cambia la resolución (por ejemplo, cuando un jugador cambia el tamaño de la ventana o rota el dispositivo)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.Focus then
+				adaptFrame()
 			end
 		end)
 		
