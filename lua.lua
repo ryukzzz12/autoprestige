@@ -16,7 +16,7 @@ local function createGui(parent)
 	local Frame3 = Instance.new("Frame",Frame2)
 	Frame3["AnchorPoint"] = Vector2.new(0, 1)
 	Frame3["Name"] = "MainFrame"
-	Frame3["Position"] = UDim2.new(0.0568407141, 0, 0.787313461, 0)
+	Frame3["Position"] = UDim2.new(0.0208046716, 0, 0.998543382, 0)
 	Frame3["BorderColor3"] = Color3.new(0, 0, 0)
 	Frame3["Size"] = UDim2.new(0, 357, 0, 354)
 	Frame3["BorderSizePixel"] = 0
