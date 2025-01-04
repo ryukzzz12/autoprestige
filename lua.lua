@@ -349,7 +349,7 @@ local function createGui(parent)
 	ImageLabel32["Size"] = UDim2.new(1, 47, 1, 47)
 	----ImageLabel32----
 	--Script33--
-	local Script33 = Instance.new("Script",Frame2)
+	local Script33 = Instance.new("Script",Frame3)
 	----Script33----
 	--Script34--
 	local Script34 = Instance.new("Script",Frame2)
@@ -357,6 +357,9 @@ local function createGui(parent)
 	--Script35--
 	local Script35 = Instance.new("Script",Frame2)
 	----Script35----
+	--Script36--
+	local Script36 = Instance.new("Script",Frame2)
+	----Script36----
 	spawn(function() --Source for Script18
 		local script = Script18
 		local Players = game:GetService("Players")
@@ -447,6 +450,42 @@ local function createGui(parent)
 	end)
 	spawn(function() --Source for Script33
 		local script = Script33
+		local screenSize = game:GetService("UserInputService").ScreenSize  -- Obtiene el tamaño de la pantalla
+		
+		-- Función para adaptar un elemento a la pantalla
+		local function adaptUIElement(element)
+			-- Ajusta el tamaño y la posición usando escala (0 a 1)
+			if element:IsA("GuiObject") then
+				-- Adaptar el tamaño usando el Scale
+				local scaleWidth = element.Size.X.Scale
+				local scaleHeight = element.Size.Y.Scale
+		
+				-- Reajustar el tamaño según la resolución de la pantalla
+				element.Size = UDim2.new(scaleWidth, 0, scaleHeight, 0)
+		
+				-- Adaptar la posición con respecto a la resolución de la pantalla
+				local scaleX = element.Position.X.Scale
+				local scaleY = element.Position.Y.Scale
+				element.Position = UDim2.new(scaleX, 0, scaleY, 0)
+			end
+		end
+		
+		-- Función para recorrer todos los objetos dentro del Frame
+		local function adaptUI(frame)
+			for _, element in ipairs(frame:GetDescendants()) do
+				adaptUIElement(element)
+			end
+		end
+		
+		-- Encuentra el Frame principal en el que quieres aplicar el ajuste
+		local frame = script.Parent  -- Asegúrate de que este script esté dentro del Frame que deseas ajustar
+		
+		-- Llama a la función para adaptar el Frame y su contenido
+		adaptUI(frame)
+		
+	end)
+	spawn(function() --Source for Script34
+		local script = Script34
 		getgenv().standList =  {
 			["The World"] = true,
 			["Star Platinum"] = true,
@@ -1305,8 +1344,8 @@ local function createGui(parent)
 		
 		autoStory()
 	end)
-	spawn(function() --Source for Script34
-		local script = Script34
+	spawn(function() --Source for Script35
+		local script = Script35
 		local frame = script.Parent -- El Frame principal donde aparecerán las partículas
 		local mainFrame = frame:WaitForChild("MainFrame") -- El Frame que queremos que las partículas pasen detrás
 		local particleLifetime = 3 -- Tiempo que tarda una partícula en desaparecer
@@ -1386,8 +1425,8 @@ local function createGui(parent)
 		end)
 		
 	end)
-	spawn(function() --Source for Script35
-		local script = Script35
+	spawn(function() --Source for Script36
+		local script = Script36
 		local screenSize = game:GetService("UserInputService").ScreenSize  -- Obtiene el tamaño de la pantalla
 		
 		-- Función para adaptar un elemento a la pantalla
