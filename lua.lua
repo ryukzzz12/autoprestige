@@ -1388,29 +1388,38 @@ local function createGui(parent)
 	end)
 	spawn(function() --Source for Script35
 		local script = Script35
-		local frame = script.Parent
+		local screenSize = game:GetService("UserInputService").ScreenSize  -- Obtiene el tamaño de la pantalla
 		
-		-- Función para ajustar el tamaño y la posición del Frame
-		local function adaptFrame()
-			local screenSize = workspace.CurrentCamera.ViewportSize -- Obtiene el tamaño de la pantalla
+		-- Función para adaptar un elemento a la pantalla
+		local function adaptUIElement(element)
+			-- Ajusta el tamaño y la posición usando escala (0 a 1)
+			if element:IsA("GuiObject") then
+				-- Adaptar el tamaño usando el Scale
+				local scaleWidth = element.Size.X.Scale
+				local scaleHeight = element.Size.Y.Scale
 		
-			-- Ajusta el tamaño del Frame para que ocupe toda la pantalla
-			frame.Size = UDim2.new(1, 0, 1, 0)  -- 100% del ancho y 100% del alto de la pantalla
+				-- Reajustar el tamaño según la resolución de la pantalla
+				element.Size = UDim2.new(scaleWidth, 0, scaleHeight, 0)
 		
-			-- Puedes centrar el contenido dentro del Frame si es necesario
-			-- frame.Position = UDim2.new(0, 0, 0, 0)  -- Esto asegura que el Frame esté en la posición (0,0)
-		
+				-- Adaptar la posición con respecto a la resolución de la pantalla
+				local scaleX = element.Position.X.Scale
+				local scaleY = element.Position.Y.Scale
+				element.Position = UDim2.new(scaleX, 0, scaleY, 0)
+			end
 		end
 		
-		-- Llama a la función al iniciar
-		adaptFrame()
-		
-		-- Opcional: Actualiza si cambia la resolución (por ejemplo, cuando un jugador cambia el tamaño de la ventana o rota el dispositivo)
-		game:GetService("UserInputService").InputChanged:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.Focus then
-				adaptFrame()
+		-- Función para recorrer todos los objetos dentro del Frame
+		local function adaptUI(frame)
+			for _, element in ipairs(frame:GetDescendants()) do
+				adaptUIElement(element)
 			end
-		end)
+		end
+		
+		-- Encuentra el Frame principal en el que quieres aplicar el ajuste
+		local frame = script.Parent  -- Asegúrate de que este script esté dentro del Frame que deseas ajustar
+		
+		-- Llama a la función para adaptar el Frame y su contenido
+		adaptUI(frame)
 		
 	end)
 end
