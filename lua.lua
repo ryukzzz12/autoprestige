@@ -16,7 +16,7 @@ local function createGui(parent)
 	local Frame3 = Instance.new("Frame",Frame2)
 	Frame3["AnchorPoint"] = Vector2.new(0, 1)
 	Frame3["Name"] = "MainFrame"
-	Frame3["Position"] = UDim2.new(0.00793126225, 0, 0.457711428, 0)
+	Frame3["Position"] = UDim2.new(0.0568407141, 0, 0.787313461, 0)
 	Frame3["BorderColor3"] = Color3.new(0, 0, 0)
 	Frame3["Size"] = UDim2.new(0, 357, 0, 354)
 	Frame3["BorderSizePixel"] = 0
@@ -310,56 +310,26 @@ local function createGui(parent)
 	Frame29["BorderSizePixel"] = 0
 	Frame29["Size"] = UDim2.new(1, 0, 1, 0)
 	----Frame29----
-	--ImageLabel30--
-	local ImageLabel30 = Instance.new("ImageLabel",Frame29)
-	ImageLabel30["ImageColor3"] = Color3.new(0, 0, 0)
-	ImageLabel30["ScaleType"] = Enum.ScaleType.Slice
-	ImageLabel30["ImageTransparency"] = 0.5
-	ImageLabel30["SliceCenter"] = Rect.new(49, 49, 450, 450)
-	ImageLabel30["AnchorPoint"] = Vector2.new(0.5, 0.5)
-	ImageLabel30["Image"] = "rbxassetid://6014261993"
-	ImageLabel30["Name"] = "DropShadow"
-	ImageLabel30["Position"] = UDim2.new(0.5, 0, 0.5, 0)
-	ImageLabel30["BackgroundTransparency"] = 1
-	ImageLabel30["ZIndex"] = 0
-	ImageLabel30["BorderSizePixel"] = 0
-	ImageLabel30["Size"] = UDim2.new(1, 47, 1, 47)
-	----ImageLabel30----
-	--Frame31--
-	local Frame31 = Instance.new("Frame",Frame3)
-	Frame31["Name"] = "DropShadowHolder"
-	Frame31["BackgroundTransparency"] = 1
-	Frame31["ZIndex"] = 0
-	Frame31["BorderSizePixel"] = 0
-	Frame31["Size"] = UDim2.new(1, 0, 1, 0)
-	----Frame31----
-	--ImageLabel32--
-	local ImageLabel32 = Instance.new("ImageLabel",Frame31)
-	ImageLabel32["ImageColor3"] = Color3.new(0, 0, 0)
-	ImageLabel32["ScaleType"] = Enum.ScaleType.Slice
-	ImageLabel32["ImageTransparency"] = 0.5
-	ImageLabel32["SliceCenter"] = Rect.new(49, 49, 450, 450)
-	ImageLabel32["AnchorPoint"] = Vector2.new(0.5, 0.5)
-	ImageLabel32["Image"] = "rbxassetid://6014261993"
-	ImageLabel32["Name"] = "DropShadow"
-	ImageLabel32["Position"] = UDim2.new(0.5, 0, 0.5, 0)
-	ImageLabel32["BackgroundTransparency"] = 1
-	ImageLabel32["ZIndex"] = 0
-	ImageLabel32["BorderSizePixel"] = 0
-	ImageLabel32["Size"] = UDim2.new(1, 47, 1, 47)
-	----ImageLabel32----
+	--Frame30--
+	local Frame30 = Instance.new("Frame",Frame3)
+	Frame30["Name"] = "DropShadowHolder"
+	Frame30["BackgroundTransparency"] = 1
+	Frame30["ZIndex"] = 0
+	Frame30["BorderSizePixel"] = 0
+	Frame30["Size"] = UDim2.new(1, 0, 1, 0)
+	----Frame30----
+	--Script31--
+	local Script31 = Instance.new("Script",Frame3)
+	----Script31----
+	--Script32--
+	local Script32 = Instance.new("Script",Frame2)
+	----Script32----
 	--Script33--
-	local Script33 = Instance.new("Script",Frame3)
+	local Script33 = Instance.new("Script",Frame2)
 	----Script33----
 	--Script34--
 	local Script34 = Instance.new("Script",Frame2)
 	----Script34----
-	--Script35--
-	local Script35 = Instance.new("Script",Frame2)
-	----Script35----
-	--Script36--
-	local Script36 = Instance.new("Script",Frame2)
-	----Script36----
 	spawn(function() --Source for Script18
 		local script = Script18
 		local Players = game:GetService("Players")
@@ -448,8 +418,8 @@ local function createGui(parent)
 		standValue.Changed:Connect(updateStand)
 		
 	end)
-	spawn(function() --Source for Script33
-		local script = Script33
+	spawn(function() --Source for Script31
+		local script = Script31
 		local screenSize = game:GetService("UserInputService").ScreenSize  -- Obtiene el tamaño de la pantalla
 		
 		-- Función para adaptar un elemento a la pantalla
@@ -484,8 +454,8 @@ local function createGui(parent)
 		adaptUI(frame)
 		
 	end)
-	spawn(function() --Source for Script34
-		local script = Script34
+	spawn(function() --Source for Script32
+		local script = Script32
 		getgenv().standList =  {
 			["The World"] = true,
 			["Star Platinum"] = true,
@@ -1344,8 +1314,8 @@ local function createGui(parent)
 		
 		autoStory()
 	end)
-	spawn(function() --Source for Script35
-		local script = Script35
+	spawn(function() --Source for Script33
+		local script = Script33
 		local frame = script.Parent -- El Frame principal donde aparecerán las partículas
 		local mainFrame = frame:WaitForChild("MainFrame") -- El Frame que queremos que las partículas pasen detrás
 		local particleLifetime = 3 -- Tiempo que tarda una partícula en desaparecer
@@ -1425,8 +1395,8 @@ local function createGui(parent)
 		end)
 		
 	end)
-	spawn(function() --Source for Script36
-		local script = Script36
+	spawn(function() --Source for Script34
+		local script = Script34
 		local screenSize = game:GetService("UserInputService").ScreenSize  -- Obtiene el tamaño de la pantalla
 		
 		-- Función para adaptar un elemento a la pantalla
